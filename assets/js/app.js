@@ -5,12 +5,11 @@
  * nS = n of Spades
  */
 
+let mazoCartas = [];
 const cartaTipos = ["C", "D", "H", "S"];
 const especiales = ["A", "J", "K", "Q"];
 
 const crearMazoCartas = () => {
-  let mazoCartas = [];
-
   for (let numeroCarta = 2; numeroCarta < 11; numeroCarta++) {
     for (let cartaTipo of cartaTipos) {
       mazoCartas.push(numeroCarta + cartaTipo);
@@ -26,4 +25,12 @@ const crearMazoCartas = () => {
   return _.shuffle(mazoCartas);
 };
 
-const mazoCartas = crearMazoCartas();
+mazoCartas = crearMazoCartas();
+
+const pedirCarta = () => {
+  if (!mazoCartas.length) throw "Se acabaron las cartas.";
+
+  return mazoCartas.shift();
+};
+
+pedirCarta();
