@@ -30,7 +30,15 @@ mazoCartas = crearMazoCartas();
 const pedirCarta = () => {
   if (!mazoCartas.length) throw "Se acabaron las cartas.";
 
-  return mazoCartas.shift();
+  return mazoCartas.pop();
 };
 
 pedirCarta();
+
+const valorCarta = (carta) => {
+  const puntosCarta = carta.substring(0, carta.length - 1);
+
+  return isNaN(puntosCarta) ? (puntosCarta === "A" ? 11 : 10) : puntosCarta * 1;
+};
+
+valorCarta(pedirCarta());
