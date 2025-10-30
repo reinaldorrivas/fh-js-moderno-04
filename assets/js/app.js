@@ -18,7 +18,7 @@ let puntosComputadora = 0;
 // Referencias HTML
 
 const btnPedirCarta = document.body.querySelector("#btnPedirCarta");
-const btnNuevoJuego = document.body.querySelector("#btnNuevoJuego");
+const btnJuegoNuevo = document.body.querySelector("#btnJuegoNuevo");
 const btnDetenerJuego = document.body.querySelector("#btnDetenerJuego");
 const tableroPuntosJugador = document.body.querySelectorAll("small")[0];
 const tableroPuntosComputadora = document.body.querySelectorAll("small")[1];
